@@ -23,8 +23,45 @@
         <div class="navTarto" onclick="location.href='kiket_varunk.html';" style="cursor: pointer;">
             <a href="kiket_varunk.html" class="navGombok">Kiket Várunk?</a>
         </div>
-    </header>
 
+        <div id="overlayMD">
+            <a href="href=index.html">
+                <img src="images/Kedvenc Gemenc.png" alt="Kedvenc Gemenc Logó">
+            </a>
+
+            <div class="overlayElementsDivMD">
+                <a href="" class="overlayButton">Főoldal</a>
+                <a href="" class="overlayButton">Kereső</a>
+                <a href="" class="overlayButton">Könyvtár</a>
+                <a href="" class="overlayButton">Sorsolás</a>
+                <a href="" class="overlayButton">Ajánlatok</a>
+            </div>
+        </div>
+
+        <div id="overlaySM">
+            <a href="href=index.html">
+                <img src="images/Kedvenc Gemenc.png" alt="Kedvenc Gemenc Logó">
+            </a>
+            <div class="overlayElementsDivMD">
+                <a href="" class="overlayButtonSM">Főoldal</a>
+                <a href="" class="overlayButtonSM">Kereső</a>
+                <a href="" class="overlayButtonSM">Könyvtár</a>
+                <a href="" class="overlayButtonSM">Sorsolás</a>
+                <a href="" class="overlayButtonSM">Ajánlatok</a>
+            </div>
+        </div>
+
+        <button id="opencloseOverlay" onclick="OpenCloseMDSMMenu()">
+            <img id="opencloseOverlaySVG" src="images/menu-symbol-of-three-parallel-lines.svg" alt="3 vonal">
+        </button>
+
+        <button id="opencloseOverlaySM" onclick="OpenCloseMDSMMenu()">
+            <img id="opencloseOverlaySVG_SM" src="images/menu-symbol-of-three-parallel-lines.svg" alt="Lefele nyíl">
+        </button>
+    </header>
+        <div id="filterSM" onclick="OpenCloseFiltersSM()">
+            <img id="filterSMSVG" src="images/down-arrow-one.svg" alt="Nyíl">
+        </div>
         <div class="div1"> 
             <img id="udvozlo" src="images/Üdvözlő.png" alt="Üdvözlő">
         </div>
@@ -33,17 +70,16 @@
                 <a class="nagy_link" href="kiket_varunk.html">Kiket Várunk ?</a>
                 <div>
                     <a class="nagy_link" href="utvonalak.html">Útvonalak</a>
-                    <a href="utvonalak.html">Vén-Duna</a>
-                    <a href="utvonalak.html">Rezéti-Duna</a>
-                    <a href="utvonalak.html">Szeremlei-Sugó</a>
-                    <a href="utvonalak.html">Ferenc-Tápcsatorna</a>
-                    <a href="utvonalak.html">Pörbölyi Titán</a>
+                    <a href="utvonalak.html#ven_kep">Vén-Duna</a>
+                    <a href="utvonalak.html#rezeti_kep">Rezéti-Duna</a>
+                    <a href="utvonalak.html#sugo_kep">Szeremlei-Sugó</a>
+                    <a href="utvonalak.html#porboly_kep">Pörbölyi Titán</a>
                 </div>
                 <div>
                     <a class="nagy_link" href="kulonleges_turak.html">Különleges túrák</a>
-                    <a href="kulonleges_turak.html">Vadleső túra</a>
-                    <a href="kulonleges_turak.html">Szarvasbőgést hallgató túra</a>
-                    <a href="kulonleges_turak.html">Gasztro-, vízi túra</a>
+                    <a href="kulonleges_turak.html#vadleso_kep">Vadleső túra</a>
+                    <a href="kulonleges_turak.html#szarvas_kep">Szarvasbőgést hallgató túra</a>
+                    <a href="kulonleges_turak.html#gasztro_kep">Gasztro-, vízi túra</a>
                 </div>
                 <a class="nagy_link" href="mit_erdemes_hozni.html">Mit érdemes hozni ?</a>
             </aside>
@@ -51,12 +87,14 @@
                 <h2 id="bevezeto">Várunk mindenkit egy, vagy többnapos túráinkra áprilistól
                     októberig, aki szeretne betekinteni a Gemenc csodálatos világába.
                 </h2>
-                <p id="kiket_varunk">Kiket várunk: <br>
+                <p id="kiket_varunk">Kiket várunk:<br>
                     <br>
-                    Mivel a túrák megkezdése előtt átfogó tanítást tarunk,
-                    gyakorlatilag mindenkit a kezdőktől a haladókig, családokat,
-                    párokat, baráti társaságokat, céges csapatépítésen résztvevőket,
-                    osztálykiránduláson résztvevőket.
+                    A túrák megkezdése előtt átfogó tanítást tarunk, ezért vízitúráinkra
+                    várunk mindenkit a kezdőktől a haladókig: családokat, párokat,
+                    baráti társaságokat, céges csapatépítésen, vagy osztálykiránduláson
+                    résztvevőket. Egyszóval Mindenkit, aki aktív kikapcsolódásra vágyik
+                    és szeretné átélni a Gemenc kínálta háborítatlan szépséget,
+                    nyugalmat és csendet.
                 </p>
                 <img id="kep" src="images/kiket várunk.JPG" alt="Vizitúra a Vén-Dunán">
                 <div id="jelentkezes">

@@ -31,3 +31,9 @@
     font-size: 150%;
     background-color: #048A81;
 }
+
+@media only screen and (max-width: 1137px) {
+    #kiket_varunk{
+        height: 90%;
+    }
+}

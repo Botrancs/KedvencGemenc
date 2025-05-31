@@ -63,6 +63,235 @@ body{
     scroll-behavior: smooth;
 }
 
+/* MD Overlay */
+
+#opencloseOverlay{
+  border: none;
+  background: none;
+  position: absolute;
+  right: 3vw;
+  top: 1vh;
+  width: 30px;
+  height: 35px;
+  rotate: 0deg;
+  z-index: 91;
+  animation: none;
+}
+
+#opencloseOverlay > img{
+  height: inherit;
+  width: inherit;
+}
+
+.overlayElementsDivMD{
+    position: relative;
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px;
+}
+
+#overlayMD{
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 90;
+  left: 0;
+  top: 0;
+  background-color: rgb(1, 43, 40);
+  background-color: rgba(0, 37, 35, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#overlayMD > a{
+    position: relative;
+    width: 20%;
+    margin: 0 auto;
+    top: 5%;
+    background-color: #034F4B;
+    padding: 2%;
+}
+
+#overlayMD > a > img{
+    width: 100%;
+}
+
+.overlayButton{
+  padding: 3% 0;
+  background-color: #034F4B;
+  margin: 5vh 3vw;
+  text-decoration: none;
+  font-size: 50px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+#overlayMDPaused{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20%;
+  cursor: pointer;
+}
+
+#overlayPauseLines{
+  width: 10%;
+  margin: auto auto;
+}
+
+#overlayMDText{
+  font-size: 120px;
+  color: white;
+  margin: auto auto
+}
+
+
+
+/* SM overlay */
+#overlaySM{
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 93;
+  left: 0;
+  top: 0;
+  background-color: rgb(15, 20, 37);
+  background-color: rgba(15, 20, 37, 0.85);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlayButtonSM{
+  padding: 4% 0;
+  background-color: #034F4B;
+  margin: 5vh 2vw;
+  text-decoration: none;
+  font-size: 52px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+#overlayPauseLinesSM{
+  width: 25%;
+  margin: 0 auto;
+}
+
+#opencloseOverlaySM{
+  border: none;
+  background: none;
+  position: absolute;
+  right: 3vw;
+  top: 1vh;
+  width: 50px;
+  height: 55px;
+  rotate: 0deg;
+  z-index: 99;
+  animation: none;
+}
+
+#opencloseOverlaySM > img{
+  height: inherit;
+  width: inherit;
+  margin-top: 2vh;
+}
+
+#overlaySM{
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 95;
+  left: 0;
+  top: 0;
+  background-color: rgb(1, 43, 40);
+  background-color: rgba(0, 37, 35, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#overlaySM > a{
+    position: relative;
+    width: 20%;
+    margin: 0 auto;
+    top: 5%;
+    background-color: #034F4B;
+    padding: 2%;
+}
+
+/* Filter SM Gomb*/
+#filterSM{
+    display: none;
+    position: fixed;
+    top: 50%;
+    width: 15%;
+    height: 9%;
+    padding: 15% 0;
+    background: #048A81;
+    background: linear-gradient(90deg,rgba(4, 138, 129, 1) 0%, rgba(4, 138, 129, 0) 100%);
+    cursor: pointer;
+    z-index: 94;
+}
+
+#filterSMSVG{
+    position: relative;
+    width: 100%;
+    rotate: 270deg;
+    height: 8vh;
+}
+
+/*  Overlay Animations  */
+@keyframes quarterSpinForw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes quarterSpinBack {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform:  rotate(0deg);
+  }
+}
+
+@keyframes resetAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes halfSpinForw {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes halfSpinBack {
+  from {
+    transform: rotateX(-180deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
 /* Filterek */ 
 
 a + a{
@@ -73,7 +302,7 @@ a + a{
     text-decoration: none;
     padding: 5%;
     color: white;
-    font-size: large;
+    font-size: 2vw;
     background-color: #048A81;
 }
 
@@ -82,17 +311,6 @@ aside h2{
     background-color: #048A81;
     padding: 5%;
     margin: 15%;
-}
-
-#bevezeto{
-    padding: 1%;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #048A81;
-    width: 50%;
-    text-align: center;
 }
 
 #headerLeft > img{
@@ -115,7 +333,7 @@ aside h2{
     margin: 0vh 5vw;
     height: 100%;
     padding: 25px;
-    width: 100%;
+    width: 50%;
 }
 
 .osszefogo > img{
@@ -129,7 +347,7 @@ aside h2{
     text-align: center;
     background: rgb(4,138,129);
     background: linear-gradient(0deg, rgba(4,138,129,1) 0%, rgb(0, 198, 185) 100%);
-    font-size: 175%;
+    font-size: 130%;
     padding: 5%;
     margin: 1%;
     width: 35%;
@@ -153,10 +371,21 @@ p.osszefogoMiddler{
     height: auto;
     width: 25%;
     color: white;
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#filterek a{
+    width: 40%;
+}
+
+#filterek .nagy_link{
+    width: 60%;
 }
 
 aside div{
-    margin: 15vh 0;
+    margin: 10vh 0;
 }
 
 #jelentkezes{
@@ -184,7 +413,7 @@ aside div{
     padding: 1%;
     margin: 8vh auto;
     background-color: #048A81;
-    width: 50%;
+    width: 75%;
     height: auto;
     text-align: center;
 }
@@ -210,11 +439,11 @@ footer{
 }
 
 footer p{
-    line-height: 0px;
+    line-height: 20px;
     text-align: center;
     font-size: 30px;
     color: white;
-    margin: 5% 0;
+    margin: 1% 0;
 }
 
 #kapcsolatfelvetel{
@@ -259,8 +488,100 @@ footer p{
 
 /* MD */
 
+@media only screen and (min-width: 769px){
+  #opencloseOverlay{
+    display: none;
+  }
+}
+
+
 @media only screen and (max-width: 768px) {
     .navTarto{
         display: none;
     }
+
+    .navGombok, .navTarto{
+        display: none;
+    }
+
+    .navMD{
+        display: block;
+    }
+
+    #felgorgGomb{
+        width: 3.6rem;
+        height: 3.5rem;
+    }
+
+    #filterek{
+        width: 40%;
+    }
+
+    #filterek a{
+        width: 60%;
+        padding: 1%;
+    }
+
+    #filterek .nagy_link{
+        width: 70%;
+        padding: 1%;
+    }
+
+    #filterek > div{
+        margin: 1% 0;
+    }
+}
+@media only screen and (max-width: 1310px) {
+    footer p{
+        font-size: 20px;
+    }
+}
+
+/* SM */
+
+@media only screen and (min-width: 577px) {
+  #opencloseOverlaySM{
+    display: none;
   }
+}
+
+@media only screen and (max-width: 576px) {
+  #opencloseOverlay{
+    display: none;
+  }
+
+  #kapcsolatfelvetel{
+    width: 100%;
+  }
+
+  footer p{
+    font-size: 15px;
+  }
+
+  #filterek{
+    display: none;
+    position: fixed;
+    top: 5px;
+    background-color: #034F4B;
+    height: 100%;
+    width: 100%;
+    color: white;
+    flex-direction: column;
+  }
+
+  #filterek a{
+    margin: 6% auto;
+  }
+
+  .div4{
+    width: 100%;
+  }
+
+  #filterSM{
+    display: block;
+  }
+
+  a + a{
+    font-size: 5vw;
+  }
+}

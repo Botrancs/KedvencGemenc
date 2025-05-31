@@ -1,6 +1,6 @@
 #milyen_utvonal_leiras{
-    height: 4%;
-    font-size: 200%;
+    height: 6%;
+    font-size: 130%;
     padding: 2% 2% 2% 2%;
     margin-bottom: 10%;
 }
@@ -28,12 +28,42 @@
     width: 50%;
 }
 
-#tapcsatorna_kep{
+#porboly_kep{
     height: auto;
     width: 50%;
 }
 
-#porboly_kep{
-    height: auto;
-    width: 50%;
+@media only screen and (max-width: 1310px) {
+    #milyen_utvonal_leiras, p.osszefogoMiddler{
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .osszefogo{
+        display: block;
+        margin: auto;
+    }
+    #ven_kep{
+        width: 90%;
+        height: 50%;
+    }
+    .szoveg{
+        width: 80%;
+        height: 30%;
+        margin: 5%;
+    }
+    p.osszefogoMiddler{
+        margin-top: 40%;
+        margin: 12%;
+    }
+    #sugo_kep{
+        width: 90%;
+        height: 45%;
+
+    }
+    #porboly_kep{
+        width: 90%;
+        height: 40%;
+    }
 }

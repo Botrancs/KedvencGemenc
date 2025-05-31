@@ -1,4 +1,4 @@
-#ven-duna{
+#ven-duna, #magunkrol, #gemencrol{
     height: auto;
     width: 50%;
 }
@@ -9,7 +9,42 @@
 }
 
 #gemencrol{
-    height: 70%;
-    width: 100%;
+    font-size: 1.5vw;
 }
 
+@media only screen and (max-width: 1310px) {
+    #gemencrol{
+        height: 90%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .osszefogo{
+        display: block;
+        margin: auto;
+    }
+    #ven-duna{
+        width: 90%;
+        height: auto;
+    }
+    #gemencrol{
+        height: auto;
+        width: 80%;
+        margin: 5%;
+    }
+    #magunkrol{
+        height: auto;
+        width: 80%;
+        margin: 5%;
+    }
+    #turavezeto{
+        height: auto;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1045px){
+    #gemencrol{
+        font-size: 150%;
+    }
+}

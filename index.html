@@ -23,7 +23,45 @@
         <div class="navTarto" onclick="location.href='kiket_varunk.html';" style="cursor: pointer;">
             <a href="kiket_varunk.html" class="navGombok">Kiket Várunk?</a>
         </div>
+
+        <div id="overlayMD">
+            <a href="href=index.html">
+                <img src="images/Kedvenc Gemenc.png" alt="Kedvenc Gemenc Logó">
+            </a>
+
+            <div class="overlayElementsDivMD">
+                <a href="" class="overlayButton">Főoldal</a>
+                <a href="" class="overlayButton">Kereső</a>
+                <a href="" class="overlayButton">Könyvtár</a>
+                <a href="" class="overlayButton">Sorsolás</a>
+                <a href="" class="overlayButton">Ajánlatok</a>
+            </div>
+        </div>
+
+        <div id="overlaySM">
+            <a href="href=index.html">
+                <img src="images/Kedvenc Gemenc.png" alt="Kedvenc Gemenc Logó">
+            </a>
+            <div class="overlayElementsDivMD">
+                <a href="" class="overlayButtonSM">Főoldal</a>
+                <a href="" class="overlayButtonSM">Kereső</a>
+                <a href="" class="overlayButtonSM">Könyvtár</a>
+                <a href="" class="overlayButtonSM">Sorsolás</a>
+                <a href="" class="overlayButtonSM">Ajánlatok</a>
+            </div>
+        </div>
+
+        <button id="opencloseOverlay" onclick="OpenCloseMDSMMenu()">
+            <img id="opencloseOverlaySVG" src="images/menu-symbol-of-three-parallel-lines.svg" alt="3 vonal">
+        </button>
+
+        <button id="opencloseOverlaySM" onclick="OpenCloseMDSMMenu()">
+            <img id="opencloseOverlaySVG_SM" src="images/menu-symbol-of-three-parallel-lines.svg" alt="Lefele nyíl">
+        </button>
     </header>
+        <div id="filterSM" onclick="OpenCloseFiltersSM()">
+            <img id="filterSMSVG" src="images/down-arrow-one.svg" alt="Nyíl">
+        </div>
         <div class="div1"> 
             <img id="udvozlo" src="images/Üdvözlő.png" alt="Üdvözlő">
         </div>
@@ -32,17 +70,16 @@
                 <a class="nagy_link" href="kiket_varunk.html">Kiket Várunk ?</a>
                 <div>
                     <a class="nagy_link" href="utvonalak.html">Útvonalak</a>
-                    <a href="utvonalak.html">Vén-Duna</a>
-                    <a href="utvonalak.html">Rezéti-Duna</a>
-                    <a href="utvonalak.html">Szeremlei-Sugó</a>
-                    <a href="utvonalak.html">Ferenc-Tápcsatorna</a>
-                    <a href="utvonalak.html">Pörbölyi Titán</a>
+                    <a href="utvonalak.html#ven_kep">Vén-Duna</a>
+                    <a href="utvonalak.html#rezeti_kep">Rezéti-Duna</a>
+                    <a href="utvonalak.html#sugo_kep">Szeremlei-Sugó</a>
+                    <a href="utvonalak.html#porboly_kep">Pörbölyi Titán</a>
                 </div>
                 <div>
                     <a class="nagy_link" href="kulonleges_turak.html">Különleges túrák</a>
-                    <a href="kulonleges_turak.html">Vadleső túra</a>
-                    <a href="kulonleges_turak.html">Szarvasbőgést hallgató túra</a>
-                    <a href="kulonleges_turak.html">Gasztro-, vízi túra</a>
+                    <a href="kulonleges_turak.html#vadleso_kep">Vadleső túra</a>
+                    <a href="kulonleges_turak.html#szarvas_kep">Szarvasbőgést hallgató túra</a>
+                    <a href="kulonleges_turak.html#gasztro_kep">Gasztro-, vízi túra</a>
                 </div>
                 <a class="nagy_link" href="mit_erdemes_hozni.html">Mit érdemes hozni ?</a>
             </aside>
@@ -54,15 +91,15 @@
                     <div class="osszefogo">
                         <img class="kepek" id="ven-duna" src="images/gemencről.JPG" alt="A gemenci erdő">
 
-                        <p id="gemencrol" class="szoveg">Gemencről
+                        <p id="gemencrol" class="szoveg">A Gemencről:
                             <br><br>
                             Magyarország legnagyobb ártéri erdeje, egyben vizes élőhelye is,
-                            különleges növény és állatvilággal. Egy „ezerarcú” csoda, amely
-                            minden évszakban és vízállásnál más arcát mutatja, magas vízállás
-                            esetén számtalan lehetőséget nyújt a mellékágak és az ártéri erdő
-                            bejárására, de alacsony vízállásnál is olyan lehetőségeket tartogat,
-                            amelyeket kihasználva élménygazdag tartalommal lehet megtölteni
-                            a túrákat.
+                            különleges növény és állatvilággal. „Ezerarcú” csoda, amely minden
+                            évszakban és vízállásnál más arcát mutatja: magas vízállás esetén
+                            számtalan lehetőséget nyújt a mellékágak és az ártéri erdő
+                            bejárására, a fák közötti barangolásra, míg alacsony vízállásnál a
+                            napsütötte homokzátonyokon megpihenve élvezhetjük a víz
+                            simogatását, valamint a bennünket körülvevő nyugalmat.
                         </p>
                     </div>
                     <div class="osszefogo"> 
@@ -70,16 +107,18 @@
                             <br>
                             Aki hozzánk jön, az közvetlenül velem, azaz a túravezetővel fogja egyeztetni a programot.
                             <br><br>
-                            Néhány mondat magamról: Több mint két évtizeddel ezelőtt
-                            Szegeden szereztem történelem szakos bölcsész és tanár diplomát,
-                            több mint 10 éve pedagógusként dolgozom Baján. A Duna és a hazai
-                            vizek mindig is az életem részét képezték, hiszen Dunaszekcsőn
-                            nőttem fel, ahol először nagyapámmal horgásztam és jártam a
-                            Dunát, majd felnőttként már Szegeden és Baján hódoltam a
-                            horgászatnak. Az elmúlt években már túravezetőként is jártam a
-                            Baja környéki vizeket, több mint 150 túrát vezettem már a Vén-
-                            Dunán, Rezéti-Dunán, Ferenc tápcsatornán, Szeremlei-Sugovicán az
-                            extrém alacsonytól a nagyon magas (árvíz szint) vízállásig.
+                            Néhány mondat magamról: Két évtizeddel ezelőtt Szegeden
+                            szereztem történelem szakos bölcsész és tanár diplomát, több mint
+                            10 éve pedagógusként dolgozom Baján. A Duna és a hazai vizek,
+                            valamint a természet szeretete mindig is az életem részét képezték,
+                            hiszen Dunaszekcsőn nőttem fel, ahol először nagyapámmal
+                            horgásztam és jártam a Dunát, majd általános iskolásként
+                            ismerkedtem meg a kajakozással és kenuzással, felnőttként már
+                            Szegeden és Baján hódoltam a horgászatnak és a vízi sportoknak. Az
+                            elmúlt években már túravezetőként is jártam a Baja környéki
+                            vizeket, több mint 150 túrát vezettem - az extrém alacsonytól a
+                            nagyon magas (árvíz szint) vízállásig - a Vén-Dunán, a Rezéti-Dunán,
+                            a Móricz-Dunán, a Ferenc-tápcsatornán, és a Szeremlei-Holt-Dunán.
                         </p>
                         <img class="kepek" id="turavezeto" src="images/Magunkról.JPG" alt="A túravezető kenuban"> 
                     </div>
@@ -105,5 +144,6 @@
             </div>
         </footer> 
 
+        <script src="script.js"></script>
 </body>
 </html>

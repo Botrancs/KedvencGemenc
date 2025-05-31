@@ -15,18 +15,6 @@ h2 + a{
     background-color: #048A81;
 }
 
-a + a{
-    display: flex;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 10%;
-    text-decoration: none;
-    padding: 1%;
-    color: white;
-    font-size: large;
-    background-color: #048A81;
-}
-
 aside h2{
     text-align: center;
     background-color: #048A81;
@@ -38,6 +26,14 @@ aside h2{
     padding-top: 5%;
     font-size: 200%;
     height: 3%;
+}
+
+#bev_szov{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #048A81;
+    width: 50%;
 }
 
 #milyen_utvonal_leiras{
@@ -67,4 +63,29 @@ aside h2{
     font-size: 1.5em;
     font-weight: bold;
     unicode-bidi: isolate;
+}
+
+@media only screen and (max-width: 1200px) {
+    .osszefogo{
+        display: block;
+        margin: auto;
+    }
+    .szoveg{
+        width: 80%;
+        height: 20%;
+        margin: 5%;
+    }
+    #vadleso_kep{
+        width: 90%;
+        height: 35%;
+    }
+    #szarvas_kep{
+        margin-top: -42%;
+        width: 90%;
+        height: 60%;
+    }
+    #gasztro_kep{
+        width: 90%;
+        height: 50%;
+    }
 }

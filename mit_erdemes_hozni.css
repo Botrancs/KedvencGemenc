@@ -37,3 +37,24 @@
 #jelentkezes{
     margin: 1vh auto 5vh auto;
 }
+
+#arak{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .osszefogo{
+        display: block;
+        margin: auto;
+    }
+    #riaszto_kep{
+        width: 80%;
+        height: 25%;
+        margin: 3vh 3.5vw;
+    }
+    #riaszto{
+        width: 75%;
+    }
+}

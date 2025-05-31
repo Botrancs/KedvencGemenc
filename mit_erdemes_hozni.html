@@ -23,8 +23,45 @@
         <div class="navTarto" onclick="location.href='kiket_varunk.html';" style="cursor: pointer;">
             <a href="kiket_varunk.html" class="navGombok">Kiket Várunk?</a>
         </div>
-    </header>
+        
+        <div id="overlayMD">
+            <a href="href=index.html">
+                <img src="images/Kedvenc Gemenc.png" alt="Kedvenc Gemenc Logó">
+            </a>
 
+            <div class="overlayElementsDivMD">
+                <a href="" class="overlayButton">Főoldal</a>
+                <a href="" class="overlayButton">Kereső</a>
+                <a href="" class="overlayButton">Könyvtár</a>
+                <a href="" class="overlayButton">Sorsolás</a>
+                <a href="" class="overlayButton">Ajánlatok</a>
+            </div>
+        </div>
+
+        <div id="overlaySM">
+            <a href="href=index.html">
+                <img src="images/Kedvenc Gemenc.png" alt="Kedvenc Gemenc Logó">
+            </a>
+            <div class="overlayElementsDivMD">
+                <a href="" class="overlayButtonSM">Főoldal</a>
+                <a href="" class="overlayButtonSM">Kereső</a>
+                <a href="" class="overlayButtonSM">Könyvtár</a>
+                <a href="" class="overlayButtonSM">Sorsolás</a>
+                <a href="" class="overlayButtonSM">Ajánlatok</a>
+            </div>
+        </div>
+
+        <button id="opencloseOverlay" onclick="OpenCloseMDSMMenu()">
+            <img id="opencloseOverlaySVG" src="images/menu-symbol-of-three-parallel-lines.svg" alt="3 vonal">
+        </button>
+
+        <button id="opencloseOverlaySM" onclick="OpenCloseMDSMMenu()">
+            <img id="opencloseOverlaySVG_SM" src="images/menu-symbol-of-three-parallel-lines.svg" alt="Lefele nyíl">
+        </button>
+    </header>
+        <div id="filterSM" onclick="OpenCloseFiltersSM()">
+            <img id="filterSMSVG" src="images/down-arrow-one.svg" alt="Nyíl">
+        </div>
 
     <div class="div1"> 
         <img id="udvozlo" src="images/Üdvözlő.png" alt="Üdvözlő">
@@ -34,17 +71,16 @@
             <a class="nagy_link" href="kiket_varunk.html">Kiket Várunk ?</a>
             <div>
                 <a class="nagy_link" href="utvonalak.html">Útvonalak</a>
-                <a href="utvonalak.html">Vén-Duna</a>
-                <a href="utvonalak.html">Rezéti-Duna</a>
-                <a href="utvonalak.html">Szeremlei-Sugó</a>
-                <a href="utvonalak.html">Ferenc-Tápcsatorna</a>
-                <a href="utvonalak.html">Pörbölyi Titán</a>
+                    <a href="utvonalak.html#ven_kep">Vén-Duna</a>
+                    <a href="utvonalak.html#rezeti_kep">Rezéti-Duna</a>
+                    <a href="utvonalak.html#sugo_kep">Szeremlei-Sugó</a>
+                    <a href="utvonalak.html#porboly_kep">Pörbölyi Titán</a>
             </div>
             <div>
                 <a class="nagy_link" href="kulonleges_turak.html">Különleges túrák</a>
-                <a href="kulonleges_turak.html">Vadleső túra</a>
-                <a href="kulonleges_turak.html">Szarvasbőgést hallgató túra</a>
-                <a href="kulonleges_turak.html">Gasztro-, vízi túra</a>
+                    <a href="kulonleges_turak.html#vadleso_kep">Vadleső túra</a>
+                    <a href="kulonleges_turak.html#szarvas_kep">Szarvasbőgést hallgató túra</a>
+                    <a href="kulonleges_turak.html#gasztro_kep">Gasztro-, vízi túra</a>
             </div>
             <a class="nagy_link" href="mit_erdemes_hozni.html">Mit érdemes hozni ?</a>
         </aside>
@@ -64,18 +100,20 @@
                 vízbe lépj, tavasszal, ősszel, amikor hideg a víz és a levegő, és nem
                 lenne kellemes vizes lábbal túrázni, (valamint apadó vízben biztosan
                 lesz iszapos terep) hasznos lehet a gumicsizma. Egyébként sokféle
-                lábbeli alkalmas, ami lehetőleg nem csúszkál a lábadon és nem
-                sajnálod esetlegesen iszapos terepen használni.
+                lábbeli alkalmas, ami nem csúszkál a lábadon és nem sajnálod
+                esetlegesen iszapos terepen használni.
+                <br><br>
                 A felszerelés következő fontos eleme a napsugárzás elleni
                 védekezés: napszemüveg, naptej, fejfedő, érzékeny bőrűeknek
                 védőruha. Olyan fejfedőt hozz, amit az enyhe szellő nem visz le a
                 fejedről, kalapoknál az áll alatti rögzítés a szerencsés.
-                Szúnyog és kullancsriasztó.
             </p>
 
             <div class="osszefogo">
                 <img id="riaszto_kep" src="images/riasztó.jpg" alt="Szúnyogriasztó">
                 <p id="riaszto" class="szoveg">
+                    Szúnyog és kullancsriasztó.
+                    <br><br>
                     Megfelelő mennyiségű(legalább fejenként 1,5-2l) alkohol mentes
                     folyadék,(a start és célhelyen nem ívóvíz folyik a csapból) saját
                     igénynek megfelelő mennyiségű szendvics, illetve nasi.
@@ -83,14 +121,28 @@
                     kukászsákba csomagolod és bekötöd, így vízmentes lesz. WC papír,
                     zsebkendő, egyéb eü. felszerelés, ezeket is zárható műanyag
                     tasakba érdemes tenni. Telefonoknak vízmentes tasak, esetleg jól
-                    zárődő ételes doboz. A dohányzóknak valami csikktartó
-                    alkalmatosság.
-                    Érdemes párnát, vagy valami kényelmes üléstakarót hozni.
+                    zárdő ételes doboz. A dohányzóknak valamilyen csikktartó edény.
+                    Érdemes párnát, vagy kényelmes üléstakarót hozni.
                     Magas UV sugárzásban hasznos lehet a hosszú ujjú póló, illetve
-                    olyan hosszabb nadrág, ami takarja ülő helyzetben a combot.
+                    olyan hosszabb nadrág, ami takarja ülő helyzetben a combot
                     Ha érzékeny a kezed kesztyű is jól jöhet.
                 </p>
             </div>
+
+            <p id="arak" class="szoveg">
+                A túrák díja 11000 Ft/fő/nap
+                
+                A díj tartalmazza a kenuk és felszerelésük biztosítását, valamint a
+                
+                túraszervezés és a túravezetés díját.
+                
+                A további felmerülő költségek(utazási- , szállás-, étkezési-költségek)
+                
+                a résztvevőket terhelik.
+                
+                10% kedvezményt tudunk adni, ha egy csapat legalább 10 fővel
+                
+                jelentkezik.</p>
 
             <div id="jelentkezes">
                 <h3>Itt tudsz jelentkezni a túrára</h3>
