@@ -3,146 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KedvencGemenc</title>
-    <link rel="stylesheet" href="universal.css">
-    <link rel="stylesheet" href="kulonleges_turak.css">
+    <title>Kedvenc Gemenc: Túravezetés a Gemenci erdőben</title>
+    <meta name="description" content="Fedezd fel a Gemenci-erdő varázslatos világát tapasztalt túravezetőinkkel! Személyre szabott túrák, természetfotózás, vadmegfigyelés és élménydús programok a Duna-Dráva Nemzeti Park szívében.">
+    <meta name="keywords" content="Gemenc, túravezetés, Gemenci erdő, természetjárás, kirándulás, vadmegfigyelés, Duna-Dráva Nemzeti Park, ökoturizmus, természetfotózás">
+    <meta name="author" content="kedvencgemenc.hu">
+    <meta property="og:title" content="Kedvenc Gemenc - Túravezetés a Gemenci-erdőben">
+    <meta property="og:description" content="Személyre szabott túrák és élmények a Gemenci-erdőben profi túravezetővel.">
+    <meta property="og:url" content="https://kedvencgemenc.hu">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://kedvencgemenc.hu/images/kedvencgemenc.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="universal.css?v2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="index.html" id="headerLeft"><img src="images/Kedvenc Gemenc.png" alt="KedvencGemenc logó"></a>
-        
-        <div class="navTarto" onclick="location.href='mit_erdemes_hozni.html';" style="cursor: pointer;">
-            <a href="mit_erdemes_hozni.html" class="navGombok">Mit érdemes hozni?</a>
-        </div>
-        <div class="navTarto" onclick="location.href='kulonleges_turak.html';" style="cursor: pointer;">
-            <a href="kulonleges_turak.html" class="navGombok">Különleges túrák</a>
-        </div>
-        <div class="navTarto" onclick="location.href='utvonalak.html';" style="cursor: pointer;">
-            <a href="utvonalak.html" class="navGombok">Útvonalak</a>
-        </div>
-        <div class="navTarto" onclick="location.href='kiket_varunk.html';" style="cursor: pointer;">
-            <a href="kiket_varunk.html" class="navGombok">Kiket Várunk?</a>
-        </div>
-        
-        <div id="overlayMD">
-            <a href="href=index.html">
-                <img src="images/Kedvenc Gemenc.png" alt="Kedvenc Gemenc Logó">
-            </a>
+    <header>        
+        <img src="images/udvozlo.png" alt="Gemenci túra" class="header-image">
+        <div class="header-text">
+            <a href="index.html" class="kedvenc_logo"><img src="images/Kedvenc Gemenc.png" alt="KedvencGemenc logó"></a>
+            <button class="hamburger" id="hamburgerMenu" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <div class="overlayElementsDivMD">
-                <a href="" class="overlayButton">Főoldal</a>
-                <a href="" class="overlayButton">Kereső</a>
-                <a href="" class="overlayButton">Könyvtár</a>
-                <a href="" class="overlayButton">Sorsolás</a>
-                <a href="" class="overlayButton">Ajánlatok</a>
-            </div>
+            <nav class="headerNav" id="headerNav">
+                <div class="navTarto" onclick="location.href='mit_erdemes_hozni.html';">
+                    <a href="mit_erdemes_hozni.html" class="navGombok">Mit&nbsp;érdemes&nbsp;hozni?</a>
+                </div>
+                <div class="navTarto" onclick="location.href='kulonleges_turak.html';">
+                    <a href="kulonleges_turak.html" class="navGombok">Különleges&nbsp;túrák</a>
+                </div>
+                <div class="navTarto" onclick="location.href='utvonalak.html';">
+                    <a href="utvonalak.html" class="navGombok">Túra&nbsp;útvonalak</a>
+                </div>
+                <div class="navTarto" onclick="location.href='kiket_varunk.html';">
+                    <a href="kiket_varunk.html" class="navGombok">Kiket&nbsp;várunk?</a>
+                </div>
+            </nav>
         </div>
-
-        <div id="overlaySM">
-            <a href="href=index.html">
-                <img src="images/Kedvenc Gemenc.png" alt="Kedvenc Gemenc Logó">
-            </a>
-            <div class="overlayElementsDivMD">
-                <a href="" class="overlayButtonSM">Főoldal</a>
-                <a href="" class="overlayButtonSM">Kereső</a>
-                <a href="" class="overlayButtonSM">Könyvtár</a>
-                <a href="" class="overlayButtonSM">Sorsolás</a>
-                <a href="" class="overlayButtonSM">Ajánlatok</a>
-            </div>
-        </div>
-
-        <button id="opencloseOverlay" onclick="OpenCloseMDSMMenu()">
-            <img id="opencloseOverlaySVG" src="images/menu-symbol-of-three-parallel-lines.svg" alt="3 vonal">
-        </button>
-
-        <button id="opencloseOverlaySM" onclick="OpenCloseMDSMMenu()">
-            <img id="opencloseOverlaySVG_SM" src="images/menu-symbol-of-three-parallel-lines.svg" alt="Lefele nyíl">
-        </button>
     </header>
-        <div id="filterSM" onclick="OpenCloseFiltersSM()">
-            <img id="filterSMSVG" src="images/down-arrow-one.svg" alt="Nyíl">
-        </div>
-        <div class="div1"> 
-            <img id="udvozlo" src="images/Üdvözlő.png" alt="Üdvözlő">
-        </div>
-        <div class="div2"> 
-            <aside id="filterek">
-                <a class="nagy_link" href="kiket_varunk.html">Kiket Várunk ?</a>
-                <div>
-                    <a class="nagy_link" href="utvonalak.html">Útvonalak</a>
-                    <a href="utvonalak.html#ven_kep">Vén-Duna</a>
-                    <a href="utvonalak.html#rezeti_kep">Rezéti-Duna</a>
-                    <a href="utvonalak.html#sugo_kep">Szeremlei-Sugó</a>
-                    <a href="utvonalak.html#porboly_kep">Pörbölyi Titán</a>
-                </div>
-                <div>
-                    <a class="nagy_link" href="kulonleges_turak.html">Különleges túrák</a>
-                    <a href="kulonleges_turak.html#vadleso_kep">Vadleső túra</a>
-                    <a href="kulonleges_turak.html#szarvas_kep">Szarvasbőgést hallgató túra</a>
-                    <a href="kulonleges_turak.html#gasztro_kep">Gasztro-, vízi túra</a>
-                </div>
-                <a class="nagy_link" href="mit_erdemes_hozni.html">Mit érdemes hozni ?</a>
-            </aside>
-            <div class="div4">
-                <h2 id="bevezeto">Várunk mindenkit egy, vagy többnapos túráinkra áprilistól
-                    októberig, aki szeretne betekinteni a Gemenc csodálatos világába.
-                </h2>
-                <h2 id="bev_szov">Különleges túrák:</h2>
-                    <div class="osszefogo">
-                        <p id="vadleso" class="szoveg">Vadleső túra
-                            <br><br>
-                            Sötétedés előtt kb. 3 órával gyülekezünk, elsősorban
-                            nyáron, hétközben amikor kisebb a vízen a forgalom evezünk egy
-                            kényelmes távot, olyan helyeket érintve, ahol a nagyvadak és
-                            hódok, vízimadarak nagy eséllyel láthatóak.(természetesen garancia
-                            nincs rá) Ezekre a túrákra a kalandvágyóbb és lehetőleg némi
-                            tapasztalattal rendelkező jelentkezőket várjuk, halkan fogunk
-                            közlekedni és beszélni, a visszaérkezés már sötétben lesz.
-                        </p>
 
-                        <img id="vadleso_kep" src="images/vadleső.jpg" alt="Barna rétihéja">
+    <div class="div2">
+        <div id="filterek">
+            <a class="nagy_link" href="kiket_varunk.html">Kiket Várunk ?</a>
+            <div>
+                <a class="nagy_link" href="utvonalak.html">Útvonalak</a>
+                <a class="kis_link" href="utvonalak.html#tura_utvonal_2025_baja">Vén-Duna</a>
+                <a class="kis_link" href="utvonalak.html#tura_utvonal_2025_ersekcsanad">Rezéti-Duna</a>
+                <a class="kis_link" href="utvonalak.html#tura_utvonal_2025_baja_2">Szeremlei-Sugó</a>
+                <a class="kis_link" href="utvonalak.html#tura_utvonal_2025_porboly">Pörbölyi Titán</a>
+            </div>
+            <div>
+                <a class="nagy_link" href="kulonleges_turak.html">Különleges túrák</a>
+                <a class="kis_link" href="kulonleges_turak.html#vadleso_tura_2025">Vadleső túra</a>
+                <a class="kis_link" href="kulonleges_turak.html#szarvasboges_tura_2025">Szarvasbőgést hallgató túra</a>
+                <a class="kis_link" href="kulonleges_turak.html#gasztro_tura_2025">Gasztro-, vízi túra</a>
+            </div>
+            <a class="nagy_link" href="mit_erdemes_hozni.html">Mit érdemes hozni ?</a>
+        </div>
+
+            <div class="div4">
+                <div class="keressen">
+                    <div class="keressen">
+                        <div class="keresen_belso">
+                            <p>Várunk mindenkit egy, vagy többnapos túráinkra áprilistól
+                                októberig, aki szeretne betekinteni a Gemenc csodálatos világába.
+                            </p>
+                            <h2>Keressen Minket!</h2>
+                            <p><button class="telefon_button"><a href="tel:+36203170643">Telefon: +36 20 317 0643</button></a></p>
+                            <p><a href="mailto:kedvencgemenc@gmail.com">E-mail: kedvencgemenc@gmail.com</a></p>
+                        </div>
                     </div>
-                    <div class="osszefogo"> 
-                        <img id="szarvas_kep" src="images/szarvas.jpeg" alt="Szarvasbőgés">
-                        <p id="szarvas" class="szoveg"> Szarvasbőgést hallgató túra
-                            <br><br>
+                </div>
+            <!--Különleges túrák egyedi rész-->    
+                <div id="vadleso_tura_2025"  class="osszefogo">
+                    <img src="images/vadleso.jpg" alt="Vadleső túra" />
+                    <div class="szoveg">
+                            <h1>Vadleső túra</h1>
+                            Sötétedés előtt kb. 3 órával gyülekezünk, elsősorban nyáron, hétközben amikor kisebb a vízen a forgalom evezünk egy kényelmes távot, olyan helyeket érintve, ahol a nagyvadak és hódok, vízimadarak nagy eséllyel láthatóak.(természetesen garancia nincs rá) Ezekre a túrákra a kalandvágyóbb és lehetőleg némi tapasztalattal rendelkező jelentkezőket várunk, halkan fogunk közlekedni és beszélni, a visszaérkezés már sötétben lesz.
+                    </div>
+                </div>
+
+                <div id="szarvasboges_tura_2025"  class="osszefogo">
+                    <img src="images/szarvas.jpg" alt="Szarvasbőgés túra" />
+                    <div class="szoveg">
+                            <h1>Szarvasbőgést hallgató túra</h1>
                             Ezeket a túrákat szintén sötétedés
                             előtt 2-3 órával indítjuk, nyilván az időpont is behatárolt, augusztus
                             közepétől, végétől szeptember közepéig.(A bőgés kezdete évente
                             eltérhet néhány napot, esetleg hetet) Erre a túrára is a kicsit
                             kalandvágyóbb és némi tapasztalattal rendelkező túrázókat várjuk,
-                            itt is sötétben érünk vissza, csendesen közlekedünk és beszélünk.
-                        </p>
-                    </div>
-                    <div class="osszefogo"> 
-                        <p id="gasztro" class="szoveg">Gasztronómia és vízitúra összekapcsolása
-                            <br><br>
-                            Megfelelő számú
-                            érdeklődő esetén lehetőség van akár a vízparton is bajai halászlé,
-                            grill ételek, saláták, esetleg más „egytálétel” jellegű étel
-                            elkészítésére és elfogyasztására.
-                        </p> 
-                        <img id="gasztro_kep" src="images/Halászlé.jpg" alt="Halászlé bográcsban">
-                    </div>
-                    <div id="jelentkezes">
-                        <h3>Itt tudsz jelentkezni a túrára</h3>
-                        <a id="urlap" href="https://docs.google.com/forms/d/e/1FAIpQLSesmDt4Ip9Vx149ukMGmTSsVkNvWVpET5lr7gn7NuEN7dtKGw/viewform?usp=sharing" target="_blank">Tovább az űrlapra</a>
+                            itt is sötétben érünk vissza, és csendesen közlekedünk és beszélünk.
                     </div>
                 </div>
+
+                <div id="gasztro_tura_2025"  class="osszefogo">
+                    <img src="images/halaszle.jpg" alt="Gasztronómia és vízitúra" />
+                    <div class="szoveg">
+                            <h1>Gasztronómia és vízitúra összekapcsolása</h1>
+                            Megfelelő számú
+                            érdeklődő esetén
+                            lehetőség van akár a vízparton is bajai halászlé,
+                            esetleg más „egytálétel” jellegű étel elkészítésére és elfogyasztására.
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer id="lablec">
+            <div id="jelentkezes">
+                <h3>Itt tudsz jelentkezni a túrára:</h3>
+                    <h4><a id="urlap" href="https://docs.google.com/forms/d/e/1FAIpQLSesmDt4Ip9Vx149ukMGmTSsVkNvWVpET5lr7gn7NuEN7dtKGw/viewform?usp=sharing" target="_blank">
+                        <button class="telefon_button">Túra űrlap</button></a></h4>
+                    <p>
+                        <b>A túrák díja 11 000 Ft/fő/nap</b>
+                        <br><br>
+                        A díj tartalmazza a kenuk és felszerelésük biztosítását, valamint a túraszervezés és a túravezetés díját.
+                        <br><br>
+                        A további felmerülő költségek(utazási- , szállás-, étkezési-költségek) a résztvevőket terhelik.
+                        <br><br>
+                        10% kedvezményt tudunk adni, ha egy csapat legalább 10 fővel jelentkezik.
+                    </p>
+            </div>          
             <div id="kapcsolatfelvetel">
-                <div class="grid_sec1">
-                    <p>Kapcsolatfelvétel</p>
-                </div>
-                <div class="grid_sec2">
-                    <p>Telefon: +36 20 317 0643</p>
-                </div>
-                <div class="grid_sec3">
-                    <p>E-mail: kedvencgemenc@gmail.com</p>
-                </div>
+                    <h3>Kapcsolatfelvétel</h3>                    
+                    <h4><a href="tel:+36203170643">Telefon: +36 20 317 0643</a></h4>
+                    <h4><a href="mailto:kedvencgemenc@gmail.com">E-mail: kedvencgemenc@gmail.com</a></h4>
             </div>
-        </footer> 
+        </footer>
+        <script src="home.js"></script>
 </body>
 </html>
