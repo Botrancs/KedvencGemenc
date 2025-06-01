@@ -25,9 +25,10 @@
 header{
     position: relative;
     width: 100%;
+    max-width: 1900px;
     height: 400px;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .kedvenc_logo {
@@ -195,6 +196,8 @@ p.osszefogoMiddler{
 .div2{
     display: flex;
     flex-wrap:wrap;
+    max-width: 1900px;
+    margin: 0 auto;
 }
 
 #filterek{
@@ -276,6 +279,8 @@ a, a:link {
 /* Footer */
 footer{
     width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
     background: rgb(4,138,129);
     background: linear-gradient(145deg, rgba(4,138,129,1) 0%, rgba(0,83,77,1) 100%);
 }
